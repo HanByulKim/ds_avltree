@@ -7,7 +7,7 @@ public:
 	Avl(){}
 
 	void insert(T n){ insert(n, root); }
-	void insert(T x, Node<T>* t){
+	void insert(T x, Node<T>*& t){
 		if (t == NULL) t = new Node<T>(x);
 		else if (x < t->n){
 			insert(x, t->left);
